@@ -90,7 +90,7 @@ b2
  (a1 %% 2) ==0
 ((a1+3)%% 2) ==0
 
-3.578 %% 2
+3.578 %% 2==0
 
 
 # Logical  Operators 
@@ -107,8 +107,9 @@ b2
 ############################
 # Topic 4_Conditional Statement in R
 # activity
-income.1=140
 age.1=45
+income.1=140
+
 
 income.2=130
 age.2=32
@@ -117,6 +118,21 @@ income.3=160
 age.3=64
 
 # if age is more than 40 income is increased by 300
+
+if (age.1>4){
+income.1=income.1+300
+}
+income.1
+if(age.2>40){
+income.2=income.2+300
+}
+income.2
+
+if(age.3>45){
+income.3=income.3+300
+}
+
+income.3
 if (age.3 > 40){
 income.3=income.3+300
 }
@@ -127,19 +143,12 @@ income.3
 # if age is more than 40 income is increased by 300 and 
 # if age is less than or equal to 40 income is increased by 200
 
-income.2
-
-if (age.2 <30){
-
-income.2=income.2+300
-
-} else if (age.2 >30) & (age.2 <40) {
-income.2=income.2+300
-}else if (age.2 >40) {
-income.2=income.2+400
+if (age.1<=40){
+income.1=income.1+200
 }
+income.1
 
-income.2
+
 
 
 
@@ -147,7 +156,17 @@ income.2
 # if age is more than 40 and less than 50 income is increased by 300 and 
 # if age is less than or equal to 40 income is increased by 200
 
-income.3
+income1=100
+
+if(age.1>=50){
+income.1=income.1+400
+} else if (age.1>40 & age.1<50){
+income.1=income.1+300
+} else if (age.1<=40){
+income.1=income.1+200
+}
+
+income.1
 
 if (age.3 >= 50){
 income.3=income.3+400
@@ -173,23 +192,37 @@ else {
 ############################
 #Topic 5_Loops in R
 
+
+vec <- c(1,2,4,3,7,6,9)
+vec
+for (val in vec)
+{
+print (val)
+}
+
+
 # activity
 # find the sum of values from 1 to 15 using loop, while, repeat
+
+i=0
+for(i in 0:15){
+i=i+1
+}
+i
+
+
+n=0
+while(n<16){
+n=n+1
+
+}
+n
+
 S=0
 for (i in 1:15){
 S=S+i
 }
-
-
-n=5
-f=1
-for (i in 1:n){
-f=f*i
-}
-f
-
-
-
+S
 
 
 
